@@ -42,6 +42,8 @@
   animation-fill-mode: forwards;
   animation: instagramDance 4s infinite;
   transform-origin: center;
+  height: 1em; /* Ensure fixed height */
+  width: auto; /* Let the width adjust to content */
 }
 
 .dancing-letter.left {
@@ -51,6 +53,47 @@
 .dancing-letter.right {
   animation-name: moveFromRight;
 }
+
+/* Additional precautions to avoid layout shifts */
+  @keyframes moveFromLeft {
+  0% {
+    transform: translateX(-100%);
+  } 
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  } 
+  /* 100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }*/
+}
+
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  /* 100% {
+    transform: translateX(0%);
+    opacity: 1;
+  } */
+} 
+
+/* @keyframes instagramDance {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+} */
 
 .space {
   display: inline-block; /* Ensures that spaces are properly positioned */

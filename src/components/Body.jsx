@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
-import { ReactTyped } from 'react-typed'; // Updated import statement
-import Confetti from 'react-confetti';
-import { useWindowSize } from '@react-hook/window-size';
-import './fire.css';
-import PhotoSlider from './PhotoSlider';
+import React, { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
+import { ReactTyped } from "react-typed"; // Updated import statement
+import Confetti from "react-confetti";
+import { useWindowSize } from "@react-hook/window-size";
+import "./fire.css";
+import PhotoSlider from "./PhotoSlider";
 
 const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
   const [width, height] = useWindowSize();
@@ -39,7 +39,9 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
         }
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -66,7 +68,7 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
         {isBirthday ? (
           <div className="h-screen flex flex-col items-center justify-center">
             <Confetti width={width} height={height} numberOfPieces={200} />
-            <div className='text-center'>
+            <div className="text-center">
               <h1 className="lg:text-8xl text-6xl font-extrabold text-gray-900 scale-up-text">
                 Happy Birthday, {name}!!
               </h1>
@@ -89,12 +91,13 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
                 </h1>
               </div>
             ) : (
-              <div className='md:text-right lg:text-right lg:m-10 md:m-20 text-center mx-5 my-28 2xl:m-24'>
+              <div className="md:text-right lg:text-right lg:m-10 md:m-20 text-center mx-5 my-28 2xl:m-24">
                 <h1 className="2xl:text-9xl md:text-8xl text-6xl font-medium text-gray-900">
                   CountDown to Your Birthday!!
                 </h1>
                 <div className="mt-4 xl:text-6xl lg:text-5xl text-4xl text-gray-600">
-                  {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+                  {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
+                  {timeLeft.seconds}s
                 </div>
               </div>
             )}
@@ -108,12 +111,17 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
       </div>
 
       {/* Video Section */}
-      <div className="w-full md:h-screen p-9 flex flex-col align-middle">
-        <h2 className="lg:text-8xl text-4xl mb-5 font-medium text-gray-800 font-serif py-4 text-center">
+      <div className="w-full p-9 flex flex-col align-middle">
+        <h2 className="lg:text-8xl text-4xl mb-5 font-medium text-gray-800 font-serif py-2 text-center scale-up-text">
           A Special Memory
         </h2>
-        <div className="aspect-video">
-          <ReactPlayer url={videoUrl} controls={true} width="100%" height="50%" />
+        <div className="aspect-video" style={{ margin: 0 }}>
+          <ReactPlayer
+            url={videoUrl}
+            controls={true}
+            width="100%"
+            height="70%"
+          />
         </div>
       </div>
     </div>
