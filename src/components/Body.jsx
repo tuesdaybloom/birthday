@@ -108,13 +108,13 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
       </div>
 
       {/* Photo Slider Section */}
-      <div className="w-full lg:h-screen md:py-10 sm:py-4">
+      <div className="w-full lg:h-screen md:py-10 ">
         <PhotoSlider photos={photos} />
       </div>
 
       {/* Video Section */}
       <div className="w-full flex flex-col align-middle">
-        <h2 className="lg:text-8xl text-4xl mt-2 mb-5 font-medium text-gray-800 font-serif py-2 text-center scale-up-text">
+        <h2 className="lg:text-8xl text-4xl  mb-5 font-medium text-gray-800 font-serif py-2 text-center scale-up-text">
           A Special Memory
         </h2>
         <div className="aspect-video" style={{ margin: 0 }}>
