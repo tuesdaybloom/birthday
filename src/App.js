@@ -45,6 +45,7 @@ function App() {
     { url: "/files/images/i35.jpeg" },
     { url: "/files/images/i36.jpeg" },
     { url: "/files/images/i37.jpeg" },
+    { url: "/files/images/i28.jpeg" },
     { url: "/files/images/i38.jpeg" },
     { url: "/files/images/i39.jpeg" },
     { url: "/files/images/i40.jpeg" },
@@ -54,7 +55,7 @@ function App() {
     { url: "/files/images/i44.jpeg" },
 
   ];
-  const videoUrl = "/videos/v1.mp4";
+  const videoUrl = "/files/videos/v1.mp4";
   const songUrl="/files/audio/song.mp3";
   return (
     <div className="App font-serif">
