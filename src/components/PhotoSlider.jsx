@@ -67,7 +67,7 @@ const PhotoSlider = ({ photos }) => {
       </h1>
       <Slider {...settings}>
         {photos.map((photo, index) => (
-          <div key={index} className="relative my-20">
+          <div key={index} className="relative my-20 ">
             <img
               src={photo.url}
               alt={`Memory ${index}`}
