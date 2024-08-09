@@ -61,13 +61,13 @@ const PhotoSlider = ({ photos }) => {
   };
 
   return (
-    <div className="w-full relative mt-5">
+    <div className="w-full relative mt-14">
       <h1  className="font-medium mb-1 text-gray-800 lg:text-8xl text-4xl sm:text-5xl md:text-6xl sm:whitespace-nowrap break-normal text-center font-serif">
         {createSpans('Your Memory Lane')}
       </h1>
       <Slider {...settings}>
         {photos.map((photo, index) => (
-          <div key={index} className="relative h-full my-20">
+          <div key={index} className="relative my-20">
             <img
               src={photo.url}
               alt={`Memory ${index}`}
