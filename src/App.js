@@ -8,9 +8,9 @@ function App() {
    const name = "Silki";
   const photos = [
     { url: "files/images/i1.jpeg" },
-    { url: ".files/images/i2.jpeg" },
-    { url: ".files/images/i3.jpeg" },
-    { url: ".files/images/i4.jpeg" },
+    { url: "files/images/i2.jpeg" },
+    { url: "files/images/i3.jpeg" },
+    { url: "files/images/i4.jpeg" },
     { url: "files/images/i5.jpeg" },
     { url: "files/images/i6.jpeg" },
     { url: "files/images/i7.jpeg" },
