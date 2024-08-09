@@ -34,31 +34,13 @@ const PhotoSlider = ({ photos }) => {
   const headingRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const letters = entry.target.querySelectorAll('.dancing-letter');
-            letters.forEach((letter, index) => {
-              letter.style.animationDelay = `${index * 0.1}s`;
-              letter.style.opacity = 1;
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
     if (headingRef.current) {
-      observer.observe(headingRef.current);
+      const letters = headingRef.current.querySelectorAll('.dancing-letter');
+      letters.forEach((letter, index) => {
+        letter.style.animationDelay = `${index * 0.1}s`;
+        letter.style.opacity = 1;
+      });
     }
-
-    return () => {
-      if (headingRef.current) {
-        observer.unobserve(headingRef.current);
-      }
-    };
   }, []);
 
   const createSpans = (text) => {
@@ -84,10 +66,10 @@ const PhotoSlider = ({ photos }) => {
 
   return (
     <div className="w-full relative mt-5">
-      <h1 ref={headingRef} className="font-medium mb-1 text-gray-800 lg:text-8xl text-4xl sm:text-5xl md:text-6xl sm:whitespace-nowrap break-normal x text-center font-serif">
+      <h1 ref={headingRef} className="font-medium mb-1 text-gray-800 lg:text-8xl text-4xl sm:text-5xl md:text-6xl sm:whitespace-nowrap break-normal text-center font-serif">
         {createSpans('Your Memory Lane')}
       </h1>
-      <Slider {...settings} className="">
+      <Slider {...settings}>
         {photos.map((photo, index) => (
           <div key={index} className="relative h-full my-20">
             <img
