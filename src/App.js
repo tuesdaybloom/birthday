@@ -54,7 +54,7 @@ function App() {
     { url: "/files/images/i44.jpeg" },
 
   ];
-  const videoUrl = "/files/videos/v1.mp4";
+  const videoUrl = "/videos/v1.mp4";
   const songUrl="/files/audio/song.mp3";
   return (
     <div className="App font-serif">
