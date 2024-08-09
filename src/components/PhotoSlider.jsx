@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import './fire.css'; // Add your custom CSS here
 
@@ -31,16 +31,12 @@ const PhotoSlider = ({ photos }) => {
     ],
   };
 
-  const headingRef = useRef(null);
-
   useEffect(() => {
-    if (headingRef.current) {
-      const letters = headingRef.current.querySelectorAll('.dancing-letter');
+      const letters =document.querySelectorAll('.dancing-letter');
       letters.forEach((letter, index) => {
         letter.style.animationDelay = `${index * 0.1}s`;
         letter.style.opacity = 1;
       });
-    }
   }, []);
 
   const createSpans = (text) => {
@@ -66,7 +62,7 @@ const PhotoSlider = ({ photos }) => {
 
   return (
     <div className="w-full relative mt-5">
-      <h1 ref={headingRef} className="font-medium mb-1 text-gray-800 lg:text-8xl text-4xl sm:text-5xl md:text-6xl sm:whitespace-nowrap break-normal text-center font-serif">
+      <h1  className="font-medium mb-1 text-gray-800 lg:text-8xl text-4xl sm:text-5xl md:text-6xl sm:whitespace-nowrap break-normal text-center font-serif">
         {createSpans('Your Memory Lane')}
       </h1>
       <Slider {...settings}>
