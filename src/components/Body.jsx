@@ -113,7 +113,7 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
       </div>
 
       {/* Video Section */}
-      <div className="w-full p-9 flex flex-col align-middle">
+      <div className="w-full flex flex-col align-middle">
         <h2 className="lg:text-8xl text-4xl mt-2 mb-5 font-medium text-gray-800 font-serif py-2 text-center scale-up-text">
           A Special Memory
         </h2>
