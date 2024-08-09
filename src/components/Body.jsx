@@ -93,11 +93,13 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
             ) : (
               <div className="md:text-right lg:text-right lg:m-10 md:m-20 text-center mx-5 my-28 2xl:m-24">
                 <h1 className="2xl:text-9xl md:text-8xl text-6xl font-medium text-gray-900">
-                  CountDown to Your Birthday!!
+                  Countdown to Your Birthday!!
                 </h1>
                 <div className="mt-4 xl:text-6xl lg:text-5xl text-4xl text-gray-600">
-                  {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
-                  {timeLeft.seconds}s
+                  {timeLeft.days > 0 && `${timeLeft.days}d `}
+                  {timeLeft.hours > 0 && `${timeLeft.hours}h `}
+                  {timeLeft.minutes > 0 && `${timeLeft.minutes}m `}
+                  {timeLeft.seconds > 0 && `${timeLeft.seconds}s`}
                 </div>
               </div>
             )}
@@ -106,7 +108,7 @@ const BirthdayWish = ({ name, photos, videoUrl, songUrl }) => {
       </div>
 
       {/* Photo Slider Section */}
-      <div className="w-full md:h-screen py-10 sm:py-8">
+      <div className="w-full lg:h-screen md:py-10 sm:py-3">
         <PhotoSlider photos={photos} />
       </div>
 
