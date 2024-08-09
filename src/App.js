@@ -7,8 +7,8 @@ import Footer from "./components/Footer";
 function App() {
    const name = "Silki";
   const photos = [
-    { url: "/files/images/i1.jpeg" },
-    { url: "/files/images/i2.jpeg" },
+    { url: "files/images/i1.jpeg" },
+    { url: "./files/images/i2.jpeg" },
     { url: "/files/images/i3.jpeg" },
     { url: "/files/images/i4.jpeg" },
     { url: "/files/images/i5.jpeg" },
@@ -39,8 +39,8 @@ function App() {
     { url: "/files/images/i29.jpeg" },
     { url: "/files/images/i30.jpeg" },
     { url: "/files/images/i31.jpeg" },
-    { url: "/files/images/i32.jpeg" },
-    { url: "/files/images/i33.jpeg" },
+    { url: "./files/images/i32.jpeg" },
+    { url: "./files/images/i33.jpeg" },
     { url: "/files/images/i34.jpeg" },
     { url: "/files/images/i35.jpeg" },
     { url: "/files/images/i36.jpeg" },
